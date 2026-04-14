@@ -1,2 +1,54 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins'    as m;
+
+
+.header-principal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 37px 264px 134px 160px;
+
+    ul{
+        @include m.reset-list();
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        
+
+        li{
+            a{
+                position: relative;
+                text-decoration: none;
+                color: v.$grey;
+                font-family: v.$poppins;font-size: 18px;
+                font-weight: 400;
+
+                &:hover{
+                    
+                    color:white ;
+                    transition: all 0.3s ease;
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        bottom: -14px;
+                        width: 65%;
+                        height: 4px;
+                        background-color: v.$pink;
+                        border-radius: 6px;
+                        
+                    }
+                    
+                    
+                }
+
+                
+            }
+            
+        }
+
+
+    }
+    
+
+
+}

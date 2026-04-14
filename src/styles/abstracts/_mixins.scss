@@ -26,11 +26,12 @@
 
 @mixin btn($bg:blue,$bgh:cyan,$c:white){
   display: inline-block;
-  padding: 1.2rem 3rem;
+  padding: 16px 69px 16px 68px;
   background-color: $bg;
   color: white;
   text-decoration: none;
   border-radius: 16px;
+  border-bottom-left-radius: 0px;
   transition: all 0.3s ease;
 
   &:hover {

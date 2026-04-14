@@ -1,2 +1,151 @@
 @use '../abstracts/variables' as v;
 @use '../abstracts/mixins'    as m;
+
+.hero-principal{
+    padding-left: 160px;
+    padding-right: 160px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .title__principal{
+        font-family: v.$merriweather;
+        color: white;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 100%;
+        width: 87%;
+        padding-bottom: 24px;
+    }
+    .subtitle{
+        color: v.$grey;
+        font-family: v.$poppins;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 40px;
+        width: 80%;
+        padding-bottom:32px ;
+    }
+    .hero__buttons{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 144px;
+        .button{
+            font-size: 18px;
+            font-weight: 400;
+            margin-right: 32px;
+            @include m.btn($bg:v.$pink,$bgh:v.$purple,$c:white)
+        }
+        .button-white{
+            color: white;
+            font-weight: 600;
+            &:hover {
+               
+                color: v.$purple;
+            }
+        }
+
+    }
+    .information{
+        display: flex;
+        flex-direction: row;
+        width: 79%;
+        height: 64px;
+
+        .info{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            
+
+            div.info__icon{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 64px;
+                height: 64px;
+                background-color: #60626A;
+                border-radius: 16px;
+                margin-right: 16px;
+                
+                img{
+                    position: relative;
+                    width: 40px;
+                    height: 40px;
+                    
+                    
+                }
+
+            }
+            h2{
+                color: white;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 100%;
+            }
+            
+        }
+
+    }
+    .hero__media{
+        padding-top: 92px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction:column ;
+        height: 865px;
+        gap: 32px;
+        margin-top: -150px;
+        justify-content: space-around;
+        
+
+        .hero__card--1{
+            background-color: v.$purple;
+            border-radius: 90px;
+            width: 240px;
+            height: 500px;
+            overflow: hidden;
+            
+        }
+        .hero__card--2{
+            background-color: v.$pink;
+            border-radius: 90px;
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            
+        }
+        .hero__card--3{
+            background-color: v.$blue;
+            border-radius: 90px;
+            width: 240px;
+            height: 240px;
+            overflow: hidden;
+            
+        }
+        .hero__card--4{
+            background-color: v.$orange;
+            border-radius: 90px;
+            width: 240px;
+            height: 500px;
+            overflow: hidden;
+           
+        }
+        .hero__card--5{
+            background-color: v.$yellow;
+            border-radius: 90px;
+            width: 240px;
+            height: 500px;
+            overflow: hidden;
+            
+        }
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        
+    }
+
+
+}

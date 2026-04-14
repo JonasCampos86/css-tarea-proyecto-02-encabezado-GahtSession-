@@ -24,7 +24,7 @@
 
 body {
   font-family: sans-serif;
-  color: v.$color-primary;
+  color: black;
 
   @include m.breakpoint(mobile) {
     font-size: 14px;
@@ -57,4 +57,32 @@ body {
 //   Y mucha paciencia Jonás, que eres capaz de muchas cosas, solo cree en TI
 // ============================
 
+body{
+  width: 1920px;
+  background-color: v.$black;
+  overflow-x: hidden;
+  &::after{
+    content: "";
+    position: absolute;
+    bottom: -220px;
+    left: 955px;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-image: url(/img/ellipse.svg);
+    z-index: -1;                    
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    bottom: -350px;
+    left: 1255px;
+    width: 750px;
+    height: 750px;
+    background-repeat: no-repeat;
+    background-image: url(/img/ellipse.svg);
+    z-index: -1;  
+    transform: rotate(-10deg);            
+  }
+}
 
